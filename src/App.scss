@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Overlock:wght@700&family=Questrial&display=swap");
+
+* {
+    font-family: "Questrial";
+}
+
+a {
+    text-decoration: none;
+}
+.material-icons-round {
+    cursor: default;
+}
+body::before {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-image: url("https://sm.pcmag.com/t/pcmag_in/gallery/t/the-10-bes/the-10-best-podcast-player-apps-for-2019_ctxq.1920.jpg");
+    z-index: -1;
+    content: "";
+    filter: contrast(1) brightness(0.5);
+}
+.nav-colored {
+    background-color: white !important;
+}
+.nav-transparent {
+    background-color: transparent !important;
+}
+
+#homebutton-navigationbar {
+    position: fixed;
+    top: 10px;
+    // margin: auto;
+    left: 1vw;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 97vw;
+    padding: 15px 0;
+    z-index: 10000;
+    transition: all 0.3s ease-in-out;
+    * {
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.scrolled-navbar {
+    background-color: white;
+    span span,
+    span b,
+    a {
+        filter: invert(1);
+    }
+    #homebutton {
+        #logo {
+            box-shadow: 10px 10px black;
+            height: 80px !important;
+            width: 80px !important;
+        }
+        span {
+            margin-top: 0 !important;
+        }
+    }
+}
+#homebutton {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    #logo {
+        background-image: linear-gradient(rgba(26, 253, 228, 1), rgba(211, 255, 0, 1));
+        -webkit-mask: url("https://raw.githubusercontent.com/ItsMeSkink/Podtist/e234a4aade630a764bfab8840a4eaff93c4fa08f/Logo%20Backgrouund%20Shape.svg")
+            no-repeat center;
+        height: 100px;
+        width: 100px;
+        mask-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img {
+            width: 60%;
+            height: 60%;
+        }
+    }
+    span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        color: white;
+        margin-top: 10px;
+        margin-left: 10px;
+        b {
+            font-family: "Overlock";
+            font-size: 40px;
+            text-decoration: underline;
+            margin-bottom: 5px;
+            font-weight: bolder;
+            -webkit-text-stroke: 1px white;
+        }
+        span {
+            width: 300px;
+            font-size: 15px;
+            margin: 0;
+            font-weight: 0;
+        }
+    }
+}
+
+#NavigationBar {
+    display: flex;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: white;
+        margin: 0 25px;
+
+        font-size: 25px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#podtists {
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1120px;
+
+    h1 {
+        color: white;
+        font-size: 60px;
+        animation: EnterPodtistTagline 2s 1 ease;
+
+        @keyframes EnterPodtistTagline {
+            from {
+                transform: translateY(150px);
+                filter: opacity(0);
+            }
+            to {
+                transform: scale(1) translateY(0);
+                filter: opacity(1);
+            }
+        }
+    }
+}

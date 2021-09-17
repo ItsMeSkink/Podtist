@@ -1,0 +1,73 @@
+.homefeatures {
+    // margin-left: 0px;
+    width: 1100px;
+    // margin: auto;
+    margin-top: 100px;
+    .feature {
+        display: flex;
+        align-items: center;
+        // margin: 1px 0;
+        // justify-content: space-between;
+        #featuretitle {
+            -webkit-mask: url("https://raw.githubusercontent.com/ItsMeSkink/Podtist/9679fcc58b47e121e7caf070791f23eb59b81e3b/Hexagon%20Rectangle.svg")
+                no-repeat center;
+            height: 350px;
+            width: 350px;
+            background-color: rgb(255, 238, 0);
+            mask-size: contain;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 50px;
+            padding-left: 20px;
+            margin: 0;
+            font-size: 40px;
+            span {
+                transform: scale(0.9);
+            }
+        }
+
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+            h1 {
+                font-size: 35px !important;
+                transform: rotate(60deg);
+                background-color: rgb(0, 255, 0) !important;
+
+                // span {
+                //     transform: rotate(-60deg) scale(0.9) !important;
+                // }
+            }
+            p {
+                margin-right: 50px;
+            }
+        }
+        &:nth-child(3) {
+            h1 {
+                font-size: 35px !important;
+                transform: rotate(-60deg);
+                background-color: rgb(255, 0, 0) !important;
+                padding-right: 20px;
+
+                // span {
+                //     transform: rotate(60deg) scale(0.9) !important;
+                // }
+            }
+        }
+
+        p {
+            width: 1000px;
+            margin-top: 100px;
+            color: white;
+            font-size: 25px;
+            margin-left: 50px;
+            overflow: hidden;
+            line-height: 40px;
+            animation: FeatureIntro 3s ease-in-out forwards 1;
+
+            @keyframes FeatureIntro {
+                // ;
+            }
+        }
+    }
+}
